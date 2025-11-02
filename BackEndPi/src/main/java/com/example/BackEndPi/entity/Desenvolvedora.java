@@ -1,0 +1,85 @@
+package com.example.BackEndPi.entity;
+
+public enum Desenvolvedora {
+    NINTENDO("Nintendo"),
+    SONY_INTERACTIVE("Sony Interactive Entertainment"),
+    MICROSOFT_STUDIOS("Microsoft Studios / Xbox Game Studios"),
+    CAPCOM("Capcom"),
+    SQUARE_ENIX("Square Enix"),
+    BANDAI_NAMCO("Bandai Namco Entertainment"),
+    UBISOFT("Ubisoft"),
+    ELECTRONIC_ARTS("Electronic Arts (EA)"),
+    ACTIVISION_BLIZZARD("Activision Blizzard"),
+    ROCKSTAR_GAMES("Rockstar Games"),
+    BETHESDA("Bethesda Game Studios"),
+    CD_PROJEKT_RED("CD Projekt Red"),
+    FROMSOFTWARE("FromSoftware"),
+    INSOMNIAC_GAMES("Insomniac Games"),
+    NAUGHTY_DOG("Naughty Dog"),
+    SANTA_MONICA_STUDIO("Santa Monica Studio"),
+    GUERRILLA_GAMES("Guerrilla Games"),
+    STUDIO_343("343 Industries"),
+    OBSIDIAN("Obsidian Entertainment"),
+    BIOWARE("BioWare"),
+    REMEDY("Remedy Entertainment"),
+    LARIAN_STUDIOS("Larian Studios"),
+    IO_INTERACTIVE("IO Interactive"),
+    TEAM_NINJA("Team Ninja"),
+    KOJIMA_PRODUCTIONS("Kojima Productions"),
+    PLATINUMGAMES("PlatinumGames"),
+    ROCKSTEADY_STUDIOS("Rocksteady Studios"),
+    EPIC_GAMES("Epic Games"),
+    TREYARCH("Treyarch"),
+    INFINITY_WARD("Infinity Ward"),
+    RESPAWN_ENTERTAINMENT("Respawn Entertainment"),
+    MOJANG("Mojang Studios"),
+    VALVE("Valve Corporation"),
+    RIOT_GAMES("Riot Games"),
+    SUPERGIANT_GAMES("Supergiant Games"),
+    HELLO_GAMES("Hello Games"),
+    TEAM_CHERRY("Team Cherry"),
+    CONCERNEDAPE("ConcernedApe"),
+    TOBY_FOX("Toby Fox"),
+    ID_SOFTWARE("id Software"),
+    ARKANE_STUDIOS("Arkane Studios"),
+    TANGO_GAMESWORKS("Tango Gameworks"),
+    REBELLION("Rebellion Developments"),
+    TECHLAND("Techland"),
+    CRYTEK("Crytek"),
+    TWO_K_GAMES("2K Games / Visual Concepts"),
+    GEARBOX_SOFTWARE("Gearbox Software"),
+    SUCKER_PUNCH("Sucker Punch Productions"),
+    MONOLITH_SOFT("Monolith Soft"),
+    GAME_FREAK("Game Freak"),
+    ATLUS("Atlus"),
+    ZA_UM("ZA/UM"),
+    RETRO_STUDIOS("Retro Studios"),
+    KONAMI("Konami"),
+    MATT_MAKES_GAMES("Matt Makes Games"),
+    HAZE_LIGHT("Hazelight Studios"),
+    ASOBO_STUDIO("Asobo Studio"),
+    HOUSEMARQUE("Housemarque"),
+    POLYPHONY_DIGITAL("Polyphony Digital"),
+    PLAYGROUND_GAMES("Playground Games"),
+    THE_COALITION("The Coalition"),
+    RARE("Rare"),
+    MOON_STUDIOS("Moon Studios"),
+    STUDIO_MDHR("Studio MDHR"),
+    PLAYDEAD("Playdead"),
+    THATGAMECOMPANY("Thatgamecompany"),
+    GIANT_SQUID("Giant Squid"),
+    CAMPO_SANTO("Campo Santo"),
+    GALACTIC_CAFE("Galactic Cafe"),
+    IRRATIONAL_GAMES("Irrational Games");
+
+
+    private final String nomeCompleto;
+
+    Desenvolvedora(String nomeCompleto) {
+        this.nomeCompleto = nomeCompleto;
+    }
+
+    public String getNomeCompleto() {
+        return nomeCompleto;
+    }
+}
