@@ -5,17 +5,19 @@ import com.example.BackEndPi.service.AvaliacaoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
 @RestController
+@RequestMapping("api/avaliacao")
 @CrossOrigin(origins = "*")
 public class AvaliacaoController {
     @Autowired
     private AvaliacaoService avaliacaoService;
 
-    @GetMapping("/avaliacao")
+    @GetMapping
     public List<Avaliacao> Get() {
         return avaliacaoService.findAll();
     }
