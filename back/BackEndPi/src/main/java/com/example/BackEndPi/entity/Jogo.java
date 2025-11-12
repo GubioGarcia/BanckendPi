@@ -1,9 +1,16 @@
 package com.example.BackEndPi.entity;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 
 @Entity
 public class Jogo {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -29,10 +36,17 @@ public class Jogo {
     @Column(nullable = false, length = 255)
     private String capaUrl;
 
+    @Column(nullable = false)
+    private double mediaNotas = 0.0;
+
+    @Column(nullable = false)
+    private int totalAvaliacoes = 0;
+
     public Jogo() {
     }
 
-    public Jogo(Long id, String titulo, Plataforma plataforma, Categoria categoria, int anoLancamento, Desenvolvedora desenvolvedora, String capaUrl) {
+    public Jogo(Long id, String titulo, Plataforma plataforma, Categoria categoria, int anoLancamento,
+                Desenvolvedora desenvolvedora, String capaUrl, double mediaNotas, int totalAvaliacoes) {
         this.id = id;
         this.titulo = titulo;
         this.plataforma = plataforma;
@@ -40,6 +54,8 @@ public class Jogo {
         this.anoLancamento = anoLancamento;
         this.desenvolvedora = desenvolvedora;
         this.capaUrl = capaUrl;
+        this.mediaNotas = mediaNotas;
+        this.totalAvaliacoes = totalAvaliacoes;
     }
 
     public Long getId() {
@@ -96,5 +112,21 @@ public class Jogo {
 
     public void setCapaUrl(String capaUrl) {
         this.capaUrl = capaUrl;
+    }
+
+    public double getMediaNotas() {
+        return mediaNotas;
+    }
+
+    public void setMediaNotas(double mediaNotas) {
+        this.mediaNotas = mediaNotas;
+    }
+
+    public int getTotalAvaliacoes() {
+        return totalAvaliacoes;
+    }
+
+    public void setTotalAvaliacoes(int totalAvaliacoes) {
+        this.totalAvaliacoes = totalAvaliacoes;
     }
 }
