@@ -9,7 +9,6 @@ import com.example.BackEndPi.entity.Avaliacao;
 
 @Repository
 public interface AvaliacaoRepository extends JpaRepository<Avaliacao, Long> {
-
-    // Buscar todas as avaliações de um jogo específico
     List<Avaliacao> findByJogoId(Long jogoId);
+    List<Avaliacao> findByUsuarioId(Long usuarioId);
 }
