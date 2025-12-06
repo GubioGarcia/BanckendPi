@@ -1,6 +1,7 @@
 package com.example.BackEndPi.entity;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.*;
 
 @Entity
 public class Usuario {
@@ -12,6 +13,8 @@ public class Usuario {
     private String nome;
 
     @Column(nullable = false, length = 255)
+    @Email(message = "Email inválido")
+    @NotBlank(message = "Informe o email")
     private String email;
 
     @Column(nullable = false, length = 8)

@@ -19,7 +19,7 @@ public class ColecaoJogo {
     @Enumerated(EnumType.STRING)
     private StatusJogo status;
 
-    @Column(nullable = false)
+    @Column(nullable = true)
     private LocalDate dataInicio;
 
     @Column(nullable = true)
